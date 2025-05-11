@@ -52,7 +52,7 @@ export const Footer: FC = () => {
                 priority
               />
             </motion.div>
-            <p className="text-gray-600 text-sm leading-relaxed text-center md:text-left max-w-xs font-light tracking-wide">
+            <p className="text-zinc-300 text-sm leading-relaxed text-center md:text-left max-w-xs font-light tracking-wide">
               Crafting timeless spaces through innovative architecture and sustainable design principles.
             </p>
             <div className="flex space-x-6">

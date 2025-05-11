@@ -2,10 +2,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center bg-gray-900">
+    <section className="relative w-full h-screen flex items-center justify-center ">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
       <Image
@@ -15,7 +16,7 @@ export default function Hero() {
   style={{ objectFit: 'cover', objectPosition: 'center' }}
   priority
 />
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content Container */}
@@ -29,18 +30,18 @@ export default function Hero() {
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-4xl md:text-6xl font-extrabold text-white leading-tight"
+          className="text-4xl md:text-6xl rale font-black text-white leading-tight"
         >
-          Crafting Beautiful Web Experiences
+          Designing Dreams, Decorating Homes
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-6 text-lg md:text-xl text-gray-200"
+          className="mt-6 text-lg md:text-xl lat font-light text-zinc-200"
         >
-          We build modern, responsive, and immersive websites tailored to your brand.
+         Crafting elegant interiors that inspire comfort, style, and lasting beauty.
         </motion.p>
 
         <motion.div
@@ -49,13 +50,13 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="mt-8 flex justify-center space-x-4"
         >
-          <Link href="/#services">
-            <p className="px-6 py-3 bg-green rounded-full text-white font-medium hover:bg-green/90 transition">
-              Get Started
+          <Link href="/services">
+            <p className="px-6 py-3 rounded-full rale text-white font-medium hover:underline transition">
+              Get Started < FaArrowRight className='inline' />
             </p>
           </Link>
-          <Link href="/#portfolio">
-            <p className="px-6 py-3 border border-white rounded-full text-white font-medium hover:bg-white hover:text-darkgreen transition">
+          <Link href="/portfolio">
+            <p className="px-6 py-3 border border-white rale rounded-full text-white font-medium hover:text-black hover:bg-white hover:text-darkgreen transition">
               Our Work
             </p>
           </Link>
