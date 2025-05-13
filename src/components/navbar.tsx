@@ -7,10 +7,11 @@ import { FaFacebook, FaInstagram, FaTiktok} from 'react-icons/fa6';
 import Image from 'next/image';
 const navLinks = [
   { title: 'Home', href: '/' },
-  { title: 'Services', href: '/#services' },
-  { title: 'Portfolio', href: '/#portfolio' },
-  { title: 'About Us', href: '/#about' },
-  { title: 'Contact', href: '/#contact' },
+  { title: 'Services', href: '/services' },
+   { title: 'Real Estate', href: '/realestate' },
+  { title: 'Projects', href: '/projects' },
+  { title: 'About Us', href: '/about' },
+  { title: 'Contact', href: '/contact' },
 ];
 
 const socialLinks = [
