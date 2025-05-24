@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok, FaPhone, FaEnvelope, FaMapMarker } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +17,8 @@ const linkSections = [
     title: "Company",
     links: [
       { label: "About Us", url: "/aboutus" },
-      { label: "Projects", url: "/projects" },
+      { label: "Services", url: "/Services" },
+      { label: "Portfolio", url: "/portfolio" },
       { label: "Contact", url: "/contact" }
     ]
   },
@@ -27,7 +28,8 @@ const linkSections = [
       { label: "Terms of Service", url: "/terms" },
       { label: "Privacy Policy", url: "/privacy" }
     ]
-  }
+  },
+
 ];
 
 const iconVariants = { hover: { scale: 1.2, y: -3 } };
@@ -43,7 +45,7 @@ export const Footer: FC = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="relative w-48 h-20 cursor-pointer"
-            >
+            ><Link href='/'>
               <Image
                 src="./logowhitelarq.svg"
                 alt="LARQ Interior Design Logo"
@@ -51,6 +53,7 @@ export const Footer: FC = () => {
                 className="object-contain hover:opacity-90 transition-opacity"
                 priority
               />
+              </Link>
             </motion.div>
             <p className="text-zinc-300 text-sm leading-relaxed text-center md:text-left max-w-xs font-light tracking-wide">
               Crafting timeless spaces through innovative architecture and sustainable design principles.
@@ -58,18 +61,19 @@ export const Footer: FC = () => {
             <div className="flex space-x-6">
               {socialLinks.map(({ name, icon: Icon, url }) => (
                 <motion.a
-                  key={name}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={name}
-                  whileHover="hover"
-                  variants={iconVariants}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="text-menta hover:text-yellow transition-all duration-300 p-2 rounded-full border border-menta hover:border-yellow"
-                >
-                  <Icon className="w-5 h-5" />
-                </motion.a>
+  key={name}
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={name}
+  whileHover={{ 
+    scale: 1.2,
+    transition: { type: "spring", stiffness: 300 }
+  }}
+  className="p-2"
+>
+  <Icon className="w-5 h-5" />
+</motion.a>
               ))}
             </div>
           </div>
@@ -91,7 +95,7 @@ export const Footer: FC = () => {
                   >
                     <Link
                       href={link.url}
-                      className="text-menta hover:text-yellow text-sm transition-colors duration-300 relative font-light tracking-wide"
+                      className=" text-sm transition-colors duration-300 relative font-light tracking-wide"
                     >
                       <span className="absolute left-0 -bottom-1 w-0 h-px bg-yellow transition-all duration-300 group-hover:w-4"></span>
                       {link.label}
@@ -103,41 +107,46 @@ export const Footer: FC = () => {
           ))}
 
           {/* Newsletter Section */}
-          <div className="space-y-6">
-            <h4 className="text-xs font-medium tracking-widest text-menta uppercase pb-2 border-b border-menta">
-              Newsletter
-            </h4>
-            <p className="text-menta text-sm font-light tracking-wide">
-              Subscribe to receive design insights and exclusive updates.
-            </p>
-            <form className="flex flex-col space-y-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-transparent border border-menta rounded-none px-4 py-3 text-sm text-white placeholder-menta focus:outline-none focus:border-yellow transition-colors"
-              />
-              <button
-                type="submit"
-                className="bg-white text-black px-6 py-3 text-sm font-medium tracking-wide  transition-colors duration-300 uppercase"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
+         
+  <div className="space-y-4">
+      <h4 className="text-xs font-medium tracking-widest text-menta uppercase mb-7 pb-2 border-b border-menta">
+    Contact
+  </h4>
+    <motion.div whileHover="hover" variants={linkVariants} className="group">
+      <a href="tel:+1234567890" className="flex items-center space-x-3  transition-colors">
+        <FaPhone className="w-4 h-4" />
+        <span className="text-sm font-light">+1 (931) 224-6761</span>
+      </a>
+    </motion.div>
+    <motion.div whileHover="hover" variants={linkVariants} className="group">
+      <a href="mailto:info@larq.com" className="flex items-center space-x-3  transition-colors">
+        <FaEnvelope className="w-4 h-4" />
+        <span className="text-sm font-light">contact@larqinteriordesign.com</span>
+      </a>
+    </motion.div>
+    <motion.div whileHover="hover" variants={linkVariants} className="group">
+      <div className="flex items-start space-x-3 text-menta">
+        <FaMapMarker className="w-4 h-4 mt-1" />
+        <p className="text-sm font-light">
+          US  <br/>
+          
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</div>
 
         {/* Divider */}
         <div className="border-t border-menta mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-xs text-menta font-light tracking-wide">
-              &copy; {new Date().getFullYear()} LARQ Interior Design. All rights reserved.
+              &copy; {new Date().getFullYear()}<Link href='/' className="hover:underline"> LARQ Interior Design.</Link> All rights reserved.
             </p>
             <div className="flex space-x-4">
-              <Link href="/privacy" className="text-menta hover:text-yellow text-xs font-light transition-colors duration-300">
+              <Link href="/privacy" className=" hover:underline text-xs font-light transition-colors duration-300">
                 Privacy Policy
               </Link>
-              <span className="text-menta">|</span>
-              <Link href="/terms" className="text-menta hover:text-yellow text-xs font-light transition-colors duration-300">
+              <Link href="/terms" className="hover:underline text-xs font-light transition-colors duration-300">
                 Terms of Service
               </Link>
             </div>

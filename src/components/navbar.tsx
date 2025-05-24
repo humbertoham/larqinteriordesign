@@ -9,8 +9,8 @@ const navLinks = [
   { title: 'Home', href: '/' },
   { title: 'Services', href: '/services' },
    { title: 'Real Estate', href: '/realestate' },
-  { title: 'Projects', href: '/projects' },
-  { title: 'About Us', href: '/about' },
+  { title: 'Portfolio', href: '/portfolio' },
+  { title: 'About Us', href: '/aboutus' },
   { title: 'Contact', href: '/contact' },
 ];
 
@@ -48,7 +48,8 @@ export default function Navbar() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * idx }}
-            >
+            > 
+              
               <Link href={link.href} className="relative">
                 <motion.div whileHover="hover" initial="rest" className="relative">
                   <p className="text-white rale font-bold hover:text-gray-200 transition">
@@ -177,3 +178,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+

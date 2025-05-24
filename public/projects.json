@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Loft Revival in Polanco",
+    "description": "A sleek, urban loft transformation combining open-plan living with strategic zoning. Custom-built shelving, integrated lighting, and a muted palette create a sophisticated yet inviting atmosphere.",
+    "image": "/images/PROYECTOS/RENDERS/003.jpg",
+    "link": "https://example-interiordesign.com/polanco-loft",
+    "category": ["Industrial Chic"]
+  },
+  {
+    "id": "2",
+    "title": "Coastal Retreat in Cancún",
+    "description": "A light-filled beachfront apartment with soft textures and natural accents. Pale woods, airy fabrics, and sea-inspired hues bring the ocean’s tranquility indoors.",
+    "image": "/images/PROYECTOS/RENDERS/003.jpg",
+    "link": "https://example-interiordesign.com/cancun-retreat",
+    "category": ["Coastal Contemporary"]
+  },
+  {
+    "id": "3",
+    "title": "Classic Colonial in Monterrey",
+    "description": "A heritage home refurbished to highlight its original architectural details. Rich wood tones, patterned textiles, and antique fixtures blend tradition with modern comfort.",
+    "image": "/images/PROYECTOS/RENDERS/003.jpg",
+    "link": "https://example-interiordesign.com/monterrey-colonial",
+    "category": ["Heritage Revival"]
+  },
+  {
+    "id": "4",
+    "title": "Minimalist Studio in Guadalajara",
+    "description": "A compact studio optimized for multifunctional living. Clean lines, hidden storage, and a neutral palette maximize space and light for urban professionals.",
+    "image": "/images/PROYECTOS/RENDERS/003.jpg",
+    "link": "./images/PROYECTOS/RENDERS/003.jpg",
+    "category": ["Contemporary Minimalism"]
+  },
+  {
+    "id": "5",
+    "title": "Family Haven in Mérida",
+    "description": "A warm, family-friendly home featuring vibrant accents and durable finishes. Custom cabinetry, cozy nooks, and playful patterns ensure both style and practicality.",
+    "image": "/images/PROYECTOS/RENDERS/003.jpg",
+    "link": "https://example-interiordesign.com/merida-family",
+    "category": ["Modern Family"]
+  }
+]
