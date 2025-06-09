@@ -89,7 +89,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold rale text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold mon text-black mb-4"
           >
             Our Projects
           </motion.h2>
@@ -97,7 +97,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-lg lat text-gray-600"
+            className="text-lg open font-medium text-zinc-600"
           >
             Explore our curated selection of exceptional design solutions
           </motion.p>
@@ -123,7 +123,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
                   variants={techVariants}
                   onClick={() => handleTechClick(tech)}
                 >
-                  <FiCode className='text-yellow' />
+                  <FiCode className='yel' />
                   {tech}
                   <FiX className="ml-1" />
                 </motion.div>
@@ -132,12 +132,12 @@ const Portfolio = ({ projects }: PortfolioProps) => {
 
             {/* Search Bar */}
             <div className="relative ">
-              <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-xl" 
-                style={{ color: '#fff' }}/>
+              <FiSearch className="absolute left-4 yel top-1/2 transform -translate-y-1/2 text-xl" 
+                />
               <input
                 type="text"
                 placeholder='Search'
-                className="lat w-full px-6 py-4 text-lg rounded-xl shadow-lg focus:outline-none pl-12"
+                className="font-medium w-full px-6 py-4 open text-lg rounded-xl shadow-lg focus:outline-none pl-12"
                 style={{
                   backgroundColor: '#000',
                   color: '#fff',
@@ -155,7 +155,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
           variants={containerVariants}
         >
           {filteredProjects.map((project) => (
-           <Link href='/portfolio' key={project.id}>
+           <Link href={`/portfolio/${project.id}`} key={project.id}>
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -179,10 +179,10 @@ const Portfolio = ({ projects }: PortfolioProps) => {
                     whileInView={{ y: 0 }}
                     className="space-y-2"
                   >
-                    <span className="text-sm font-light text-gray-200">
+                    <span className="text-sm font-light open text-zinc-200">
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
+                    <h3 className="text-xl mon font-semibold">{project.title}</h3>
                   </motion.div>
                 </div>
               </div>
@@ -198,7 +198,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <p className="lat text-xl" style={{ color: '#172b2d' }}>
+            <p className="open font-medium text-xl" style={{ color: '#172b2d' }}>
                 Not Found
             </p>
           </motion.div>

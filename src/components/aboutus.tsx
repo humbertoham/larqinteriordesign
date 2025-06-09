@@ -61,7 +61,7 @@ const AboutUs = () => {
         >
           <div className="lg:w-1/2 relative">
             <Image
-              src="/images/PROYECTOS/RENDERS/003.jpg" // Replace with your actual image path
+              src="/images/PROYECTOS/RENDERS/1.jpg" // Replace with your actual image path
               alt="Our Story"
               width={600}
               height={400}
@@ -69,10 +69,10 @@ const AboutUs = () => {
             />
           </div>
           <div className="lg:w-1/2">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mon text-gray-900 mb-6">
               Our Story
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg open font-medium text-zinc-600 leading-relaxed">
               Founded in 2022, LARQ has redefined interior design
               excellence across residential and commercial spaces. What began as
               a small studio with big dreams has blossomed into an award-winning
@@ -92,10 +92,10 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-indigo-50 p-8 rounded-xl"
+            className=" p-8 rounded-xl"
           >
-            <h3 className="text-2xl font-bold text-indigo-900 mb-4">Mission</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <h3 className="text-2xl font-bold yel mon mb-4">Mission</h3>
+            <p className="text-zinc-600 open font-medium leading-relaxed">
               To craft bespoke interior experiences that elevate human
               interaction with space, combining innovative design solutions
               with sustainable practices to create environments that inspire
@@ -111,8 +111,8 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="bg-stone-100 p-8 rounded-xl"
           >
-            <h3 className="text-2xl font-bold text-stone-900 mb-4">Vision</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <h3 className="text-2xl font-bold mon text-stone-900 mb-4">Vision</h3>
+            <p className="text-zinc-600 open font-medium leading-relaxed">
               To be the global benchmark for transformative interior design,
               where spatial innovation meets human-centric design principles
               to shape the future of living and working environments.
@@ -139,13 +139,13 @@ const AboutUs = () => {
               transition={{ type: 'spring', stiffness: 300 }}
               className="p-8 rounded-2xl bg-gray-50 hover:bg-white transition-colors border border-transparent hover:border-gray-200 shadow-md hover:shadow-xl"
             >
-              <div className="text-amber-600 mb-4">
+              <div className="yel mb-4">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl mon font-bold text-gray-900 mb-3">
                 {value.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-zinc-600 open font-medium">
                 {value.description}
               </p>
             </motion.div>
@@ -164,7 +164,7 @@ const AboutUs = () => {
         >
           <div className="lg:w-1/2 relative">
             <Image
-              src="/images/PROYECTOS/RENDERS/003.jpg" // Replace with your actual image path
+              src="/images/PROYECTOS/DECK/2.jpeg" // Replace with your actual image path
               alt="Design Philosophy"
               width={600}
               height={400}
@@ -172,10 +172,10 @@ const AboutUs = () => {
             />
           </div>
           <div className="lg:w-1/2">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mon text-gray-900 mb-6">
               Design Philosophy
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-zinc-600 font-medium leading-relaxed">
               We believe in design that tells a story. Every curve, texture, and
               hue is meticulously curated to create spaces that resonate with
               their inhabitants. Our approach combines empirical research with

@@ -19,14 +19,14 @@ const linkSections = [
       { label: "About Us", url: "/aboutus" },
       { label: "Services", url: "/Services" },
       { label: "Portfolio", url: "/portfolio" },
-      { label: "Contact", url: "/contact" }
+      { label: "Contact", url: "/contactus" }
     ]
   },
   {
     title: "Legal",
     links: [
-      { label: "Terms of Service", url: "/terms" },
-      { label: "Privacy Policy", url: "/privacy" }
+      { label: "Terms of Service", url: "/termsofservice" },
+      { label: "Privacy Policy", url: "/privacypolicy" }
     ]
   },
 
@@ -55,7 +55,7 @@ export const Footer: FC = () => {
               />
               </Link>
             </motion.div>
-            <p className="text-zinc-300 text-sm leading-relaxed text-center md:text-left max-w-xs font-light tracking-wide">
+            <p className="text-zinc-200 open  text-sm leading-relaxed text-center md:text-left max-w-xs font-light tracking-wide">
               Crafting timeless spaces through innovative architecture and sustainable design principles.
             </p>
             <div className="flex space-x-6">
@@ -81,7 +81,7 @@ export const Footer: FC = () => {
           {/* Navigation Sections */}
           {linkSections.map((section) => (
             <div key={section.title} className="space-y-6">
-              <h4 className="text-xs font-medium tracking-widest text-menta uppercase pb-2 border-b border-menta">
+              <h4 className="text-xs font-bold tracking-widest mon text-menta uppercase pb-2 border-b border-menta">
                 {section.title}
               </h4>
               <ul className="space-y-4">
@@ -95,9 +95,9 @@ export const Footer: FC = () => {
                   >
                     <Link
                       href={link.url}
-                      className=" text-sm transition-colors duration-300 relative font-light tracking-wide"
+                      className=" text-sm transition-colors duration-300 relative open font-light tracking-wide"
                     >
-                      <span className="absolute left-0 -bottom-1 w-0 h-px bg-yellow transition-all duration-300 group-hover:w-4"></span>
+                      <span className="absolute left-0 -bottom-1 w-0 h-px open font-light transition-all duration-300 group-hover:w-4"></span>
                       {link.label}
                     </Link>
                   </motion.li>
@@ -109,26 +109,26 @@ export const Footer: FC = () => {
           {/* Newsletter Section */}
          
   <div className="space-y-4">
-      <h4 className="text-xs font-medium tracking-widest text-menta uppercase mb-7 pb-2 border-b border-menta">
+      <h4 className="text-xs font-bold mon tracking-widest text-menta uppercase mb-7 pb-2 border-b border-menta">
     Contact
   </h4>
     <motion.div whileHover="hover" variants={linkVariants} className="group">
       <a href="tel:+1234567890" className="flex items-center space-x-3  transition-colors">
         <FaPhone className="w-4 h-4" />
-        <span className="text-sm font-light">+1 (931) 224-6761</span>
+        <span className="text-sm open font-light">+1 (931) 224-6761</span>
       </a>
     </motion.div>
     <motion.div whileHover="hover" variants={linkVariants} className="group">
       <a href="mailto:info@larq.com" className="flex items-center space-x-3  transition-colors">
         <FaEnvelope className="w-4 h-4" />
-        <span className="text-sm font-light">contact@larqinteriordesign.com</span>
+        <span className="text-sm open font-light">info@larqinteriors.com</span>
       </a>
     </motion.div>
     <motion.div whileHover="hover" variants={linkVariants} className="group">
       <div className="flex items-start space-x-3 text-menta">
         <FaMapMarker className="w-4 h-4 mt-1" />
-        <p className="text-sm font-light">
-          US  <br/>
+        <p className="text-sm open font-light">
+          Shelbyville, Tennessee.  <br/>
           
         </p>
       </div>
@@ -138,15 +138,15 @@ export const Footer: FC = () => {
 
         {/* Divider */}
         <div className="border-t border-menta mt-16 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-xs text-menta font-light tracking-wide">
+          <div className="flex open flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-xs  font-light tracking-wide">
               &copy; {new Date().getFullYear()}<Link href='/' className="hover:underline"> LARQ Interior Design.</Link> All rights reserved.
             </p>
             <div className="flex space-x-4">
-              <Link href="/privacy" className=" hover:underline text-xs font-light transition-colors duration-300">
+              <Link href="/privacypolicy" className=" hover:underline text-xs font-light transition-colors duration-300">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:underline text-xs font-light transition-colors duration-300">
+              <Link href="/termsofservice" className="hover:underline text-xs font-light transition-colors duration-300">
                 Terms of Service
               </Link>
             </div>

@@ -2,6 +2,7 @@ import Nav from "@/components/nav";
 import ServicesC from "@/components/services";
 import ServicesGrid from "@/components/services";
 import FAQ from "@/components/faq";
+import SecondaryServices from "@/components/secondary";
 
 const faqs = [
   {
@@ -61,6 +62,7 @@ export default function Services() {
    <>
    <Nav/>
     <ServicesC/>
+    <SecondaryServices/>
    <FAQ faqs={faqs} />
    </>
   );

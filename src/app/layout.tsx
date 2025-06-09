@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ButtonR from "@/components/buttonr";
+import SpanishBanner from "@/components/wespeak";
 
 
 export const metadata: Metadata = {
@@ -24,20 +25,19 @@ export default function RootLayout({
     <meta name="theme-color" content="#fff" />
 
     <meta name="description" content="LARQ Interior Design, TN—expert remodeling & interior decorating services. From custom kitchen and bath design to 3D visualization and architectural planning, transform your home with professional expertise. Free consultation!"/>
-    <link rel="canonical" href="https://pinkponk.lol/"/>
-    <meta name="keywords" content="Software Development, IT Consulting, Web Development, Mobile App Development, Cloud Solutions, Data Engineering, AI & Machine Learning"></meta>
+    <link rel="canonical" href="larqinteriors.com/"/>
+    <meta name="keywords" content="LARQ Interior Design, TN—expert remodeling & interior decorating services. From custom kitchen and bath design to 3D visualization and architectural planning, transform your home with professional expertise. Free consultation!"></meta>
     <meta name="robots" content="index, follow"/>
     <meta property="og:title" content="LARQ Interior Design"/>
 <meta property="og:description" content="LARQ Interior Design, TN—expert remodeling & interior decorating services. From custom kitchen and bath design to 3D visualization and architectural planning, transform your home with professional expertise. Free consultation!"/>
-<meta property="og:image" content="https://pinkponk.lol/images/card.png"/>
-<meta property="og:url" content="https://pinkponk.lol"/>
+<meta property="og:image" content="larqinteriors.com/images/card.jpeg"/>
+<meta property="og:url" content="larqinteriors.com"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="LARQ Interior Design"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="LARQ Interior Design"/>
 <meta name="twitter:description" content="LARQ Interior Design, TN—expert remodeling & interior decorating services. From custom kitchen and bath design to 3D visualization and architectural planning, transform your home with professional expertise. Free consultation!"/>
-<meta name="twitter:image" content="https://pinkponk.lol/images/card.png"/>
-<meta name="twitter:site" content="@pinkponklol"/>
+<meta name="twitter:image" content="larqinteriors.com/images/card.jpeg"/>
 <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -45,19 +45,19 @@ export default function RootLayout({
               "@context": "https://schema.org",
   "@type": "Organization",
   "name": "LARQ Interior Design",
-  "url": "https://pinkponk.lol",
-  "logo": "https://pinkponk.lol/images/weblogo.svg",
+  "url": "larqinteriors.com",
+  "logo": "larqinteriors.com/images/logoblacklarq.svg",
   "description": "LARQ Interior Design, TN—expert remodeling & interior decorating services. From custom kitchen and bath design to 3D visualization and architectural planning, transform your home with professional expertise. Free consultation!",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "email": "contacto@pinkponk.lol",
-    "areaServed": "US"
+    "email": "info@larqinteriors.com",
+    "areaServed": "Shelbyville, Tennessee."
   },
   "sameAs": [
-    "https://www.facebook.com/pinkponkstdio",
-    "https://www.instagram.com/pinkponk.lol",
-    "https://x.com/pinkponklol"
+    "https://www.facebook.com/LarqArchitecture",
+    "https://www.instagram.com/larqinteriordesign",
+    "https://www.tiktok.com/@laurellaurel98"
   ]
             }),
           }}
@@ -74,6 +74,7 @@ export default function RootLayout({
     <link id="webmanifest" rel="manifest" href="/site.webmanifest" />
   </head>
       <body>
+        <SpanishBanner/>
         <Navbar/>
         {children}
         <Footer/>

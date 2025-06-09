@@ -8,10 +8,10 @@ import Image from 'next/image';
 const navLinks = [
   { title: 'Home', href: '/' },
   { title: 'Services', href: '/services' },
-   { title: 'Real Estate', href: '/realestate' },
+   
   { title: 'Portfolio', href: '/portfolio' },
   { title: 'About Us', href: '/aboutus' },
-  { title: 'Contact', href: '/contact' },
+  { title: 'Contact', href: '/contactus' },
 ];
 
 const socialLinks = [
@@ -52,11 +52,11 @@ export default function Navbar() {
               
               <Link href={link.href} className="relative">
                 <motion.div whileHover="hover" initial="rest" className="relative">
-                  <p className="text-white rale font-bold hover:text-gray-200 transition">
+                  <p className="text-white text-medium mon font-semibold hover:text-gray-200 transition">
                     {link.title}
                   </p>
                   <motion.span
-                    className="absolute bottom-0 left-0 w-full h-[2px] bg-white origin-left"
+                    className="absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left"
                     variants={{
                       rest: { scaleX: 0 },
                       hover: { scaleX: 1 },
@@ -125,10 +125,10 @@ export default function Navbar() {
                           className="relative group"
                           whileHover={{ x: 10 }}
                         >
-                          <p className="text-black rale text-xl font-medium mb-4 transition-all group-hover:text-gray-900">
+                          <p className="text-black mon text-xl font-semibold mb-4 transition-all group-hover:text-gray-900">
                             {link.title}
                           </p>
-                          <div className="h-[2px] bg-black w-full max-w-0 group-hover:max-w-full transition-all duration-500" />
+                          <div className="h-[1px] bg-black w-full max-w-0 group-hover:max-w-full transition-all duration-500" />
                         </motion.div>
                       </Link>
                     </motion.div>
@@ -157,18 +157,18 @@ export default function Navbar() {
 
               {/* Contact Information */}
               <div className="flex flex-col items-center space-y-4 text-black">
-                <div className="flex items-center space-x-3">
+                <div className="flex open font-light items-center space-x-2">
                   <FiMail className="text-xl" />
-                  <span>contact@larqinteriordesign.com</span>
+                  <span>info@larqinteriors.com</span>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex open font-light items-center space-x-2">
                   <FiPhone className="text-xl" />
                   <span>+1 (931) 224-6761</span>
                 </div>
               </div>
 
               {/* Copyright */}
-              <p className="text-center mt-8 lat font-light text-black">
+              <p className="text-center mt-8 open font-medium text-black">
                 © {new Date().getFullYear()} <Link onClick={() => setIsOpen(false)} href="/" className=' hover:underline'> LARQ Interior Design.</Link> All rights reserved.
               </p>
             </div>

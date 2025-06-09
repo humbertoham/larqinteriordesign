@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-4xl md:text-6xl rale font-black text-white leading-tight"
+          className="text-4xl md:text-6xl mon font-black text-white leading-tight"
         >
           Designing Dreams, Decorating Homes
         </motion.h1>
@@ -39,7 +39,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-6 text-lg md:text-xl lat font-light text-zinc-200"
+          className="mt-6 text-lg md:text-xl open font-light text-zinc-300"
         >
          Crafting elegant interiors that inspire comfort, style, and lasting beauty.
         </motion.p>
@@ -51,12 +51,12 @@ export default function Hero() {
           className="mt-8 flex justify-center space-x-4"
         >
           <Link href="/services">
-            <p className="px-6 py-3 rounded-full rale text-white font-medium hover:underline transition">
+            <p className="px-6 py-3 rounded-full mon text-white font-semibold hover:underline transition">
               Get Started < FaArrowRight className='inline' />
             </p>
           </Link>
           <Link href="/portfolio">
-            <p className="px-6 py-3 border border-white rale rounded-full text-white font-medium hover:text-black hover:bg-white hover:text-darkgreen transition">
+            <p className="px-6 py-3 border border-white mon rounded-full text-white font-semibold hover:text-black hover:bg-white hover:text-darkgreen transition">
               Our Work
             </p>
           </Link>

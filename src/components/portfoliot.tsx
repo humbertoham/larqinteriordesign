@@ -4,9 +4,24 @@ import Image from 'next/image'
 import { FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
 const projects = [
-  { id: 1, title: 'Modern Luxury Apartment', category: 'Residential', image:'/images/PROYECTOS/RENDERS/003.jpg'  },
-  { id: 2, title: 'Co-working Space Design', category: 'Commercial', image:'/images/PROYECTOS/RENDERS/003.jpg'  },
-  { id: 3, title: 'Minimalist Villa', category: 'Architecture', image:'/images/PROYECTOS/RENDERS/003.jpg' },
+  {
+    id: 1,
+    title: "Basement Transformation",
+    image: "/images/PROYECTOS/BASEMENT/2.png",
+    category: ["Basement Remodel"]
+  },
+  {
+    id: 2,
+    title: "Social Area Design",
+    image: "/images/PROYECTOS/DECK/1.jpeg",
+    category: ["Entertaining Spaces"]
+  },
+  {
+    id: 3,
+    title: "Living Room Remodel",
+    image: "/images/PROYECTOS/LIVINGROOM/1.jpeg",
+    category: ["Living Room"]
+  },
 
 ]
 
@@ -19,7 +34,7 @@ const PortfolioTeaser = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold rale text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold mon text-gray-900 mb-4"
           >
             Our Featured Projects
           </motion.h2>
@@ -27,7 +42,7 @@ const PortfolioTeaser = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-lg lat text-gray-600"
+            className="text-lg open font-medium text-gray-600"
           >
             Explore our curated selection of exceptional design solutions
           </motion.p>
@@ -35,7 +50,7 @@ const PortfolioTeaser = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
-            <Link href='/portfolio' key={project.id}>
+            <Link href={`/portfolio/${project.id}`} key={project.id}>
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -59,10 +74,10 @@ const PortfolioTeaser = () => {
                     whileInView={{ y: 0 }}
                     className="space-y-2"
                   >
-                    <span className="text-sm font-light text-gray-200">
+                    <span className="text-sm font-light open text-zinc-200">
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
+                    <h3 className="text-xl mon font-semibold">{project.title}</h3>
                   </motion.div>
                 </div>
               </div>
@@ -77,7 +92,7 @@ const PortfolioTeaser = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Link  href='/portfolio' className="flex items-center  max-w-54 gap-2 mx-auto px-8 py-3 lat text-black hover:text-white border-2 border-black hover:bg-black rounded-full transition-all duration-300">
+          <Link  href='/portfolio' className="flex items-center  max-w-60 gap-2 mx-auto px-8 py-3 mon font-semibold text-black hover:text-white border-1 border-black hover:bg-black rounded-full transition-all duration-300">
             View All Projects
             <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>

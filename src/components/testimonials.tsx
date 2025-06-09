@@ -64,10 +64,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl rale font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl mon font-bold text-gray-900 mb-4">
             Client Experiences
           </h2>
-          <p className="text-gray-600 lat text-lg">
+          <p className="text-zinc-600 open font-medium text-lg">
             Discover what our valued clients say about our collaboration
           </p>
         </motion.div>
@@ -87,10 +87,10 @@ const Testimonials = () => {
               transition={{ type: 'spring', stiffness: 300 }}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="mb-6 text-amber-500">
+              <div className="mb-6 yel">
                 <FaQuoteLeft className="text-3xl opacity-80" />
               </div>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-zinc-600 mb-6 open font-medium leading-relaxed">
                 {testimonial.text}
               </p>
               <div className="flex items-center mb-4">
@@ -103,17 +103,17 @@ const Testimonials = () => {
                     <FaStar
                       className={`w-5 h-5 ${
                         i < testimonial.rating
-                          ? 'text-amber-500'
+                          ? 'yel'
                           : 'text-gray-300'
                       }`}
                     />
                   </motion.span>
                 ))}
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg mon font-semibold text-gray-900">
                 {testimonial.clientName}
               </h3>
-              <p className="text-gray-600">{testimonial.clientRole}</p>
+              <p className="text-zinc-500 font-medium open">{testimonial.clientRole}</p>
             </motion.div>
           ))}
         </motion.div>

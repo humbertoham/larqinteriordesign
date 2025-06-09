@@ -1,42 +1,44 @@
 [
   {
     "id": "1",
-    "title": "Loft Revival in Polanco",
-    "description": "A sleek, urban loft transformation combining open-plan living with strategic zoning. Custom-built shelving, integrated lighting, and a muted palette create a sophisticated yet inviting atmosphere.",
-    "image": "/images/PROYECTOS/RENDERS/003.jpg",
-    "link": "https://example-interiordesign.com/polanco-loft",
-    "category": ["Industrial Chic"]
+    "title": "Basement Transformation",
+    "description": "Turned an underused basement into a warm, functional living space with two comfortable bedrooms, a cozy lounge area, and a redesigned staircase to enhance style and flow.",
+    "image": "/images/PROYECTOS/BASEMENT/2.png",
+    "category": ["Basement Remodel"]
   },
   {
     "id": "2",
-    "title": "Coastal Retreat in Cancún",
-    "description": "A light-filled beachfront apartment with soft textures and natural accents. Pale woods, airy fabrics, and sea-inspired hues bring the ocean’s tranquility indoors.",
-    "image": "/images/PROYECTOS/RENDERS/003.jpg",
-    "link": "https://example-interiordesign.com/cancun-retreat",
-    "category": ["Coastal Contemporary"]
+    "title": "Social Area Design",
+    "description": "Crafted a stunning social area featuring rich wood finishes and beautiful outdoor views, thoughtfully designed to feel both elegant and inviting for seamless gatherings.",
+    "image": "/images/PROYECTOS/DECK/1.jpeg",
+    "category": ["Entertaining Spaces"]
   },
   {
     "id": "3",
-    "title": "Classic Colonial in Monterrey",
-    "description": "A heritage home refurbished to highlight its original architectural details. Rich wood tones, patterned textiles, and antique fixtures blend tradition with modern comfort.",
-    "image": "/images/PROYECTOS/RENDERS/003.jpg",
-    "link": "https://example-interiordesign.com/monterrey-colonial",
-    "category": ["Heritage Revival"]
+    "title": "Living Room Remodel",
+    "description": "Transformed a living room into a modern, inviting space with a sleek built-in fireplace, clean lines, neutral tones, and thoughtful lighting for everyday comfort and special gatherings.",
+    "image": "/images/PROYECTOS/LIVINGROOM/1.jpeg",
+    "category": ["Living Room"]
   },
   {
     "id": "4",
-    "title": "Minimalist Studio in Guadalajara",
-    "description": "A compact studio optimized for multifunctional living. Clean lines, hidden storage, and a neutral palette maximize space and light for urban professionals.",
-    "image": "/images/PROYECTOS/RENDERS/003.jpg",
-    "link": "./images/PROYECTOS/RENDERS/003.jpg",
-    "category": ["Contemporary Minimalism"]
+    "title": "Residential Pool Design",
+    "description": "Blended modern aesthetics with functional outdoor living in a custom pool design, curated to complement the home’s architecture and enhance relaxation and entertainment.",
+    "image": "/images/PROYECTOS/NASHVILLEPOOL/2.jpg",
+    "category": ["Outdoor Living"]
   },
   {
     "id": "5",
-    "title": "Family Haven in Mérida",
-    "description": "A warm, family-friendly home featuring vibrant accents and durable finishes. Custom cabinetry, cozy nooks, and playful patterns ensure both style and practicality.",
-    "image": "/images/PROYECTOS/RENDERS/003.jpg",
-    "link": "https://example-interiordesign.com/merida-family",
-    "category": ["Modern Family"]
+    "title": "Storm Room Design",
+    "description": "Developed a secure, custom-designed storm room that offers peace of mind during weather emergencies, combining robust safety features with comfort and refined style.",
+    "image": "/images/PROYECTOS/STORMROOM/1.jpeg",
+    "category": ["Safety & Security"]
+  },
+    {
+    "id": "6",
+    "title": "Renders",
+    "description": "Bring Your Vision to Life with 3D Renderings. First impressions matter—especially in design. At LARQ Interior Design, we create high-quality 3D renderings that help you present your projects with clarity and confidence. Whether you’re pitching to a client or making design decisions, our visualizations let you see the final result before construction begins. Stand out, gain your client’s trust, and communicate your ideas more effectively with professional 3D renderings. Ready to elevate your presentation? Let LARQ turn your ideas into visuals that speak for themselves.",
+    "image": "/images/PROYECTOS/RENDERS/1.jpg",
+    "category": ["3D Rendering"]
   }
 ]

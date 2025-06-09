@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiArrowUpRight } from 'react-icons/fi';
-
+import Link from 'next/link';
 const AboutSnapshot = () => {
   const imageVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -28,11 +28,11 @@ const AboutSnapshot = () => {
             viewport={{ once: true }}
             variants={textVariants}
           >
-            <h2 className="text-4xl rale font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl mon font-bold text-gray-900 mb-6">
               Crafting Spaces<br /> with Intention
             </h2>
             
-            <p className="text-lg text-gray-600 lat mb-8 leading-relaxed">
+            <p className="text-lg text-zinc-600 font-medium open mb-8 leading-relaxed">
               At the heart of our practice lies a commitment to transform environments through 
               thoughtful design. We believe spaces should inspire, comfort, and reflect the 
               unique stories of those who inhabit them. With a decade of expertise, we merge 
@@ -40,13 +40,13 @@ const AboutSnapshot = () => {
             </p>
 
             <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-              <a
+              <Link
                 href="/aboutus"
-                className="flex items-center gap-2 text-lg font-semibold lat text-black transition-colors"
+                className="flex items-center gap-2 text-lg font-semibold mon text-black transition-colors"
               >
                 Discover Our Story
-                <FiArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </a>
+                <FiArrowUpRight className="w-5 h-5 yel transition-transform group-hover:translate-x-1" />
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -56,14 +56,14 @@ const AboutSnapshot = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="relative group"
           >
-            <div className="absolute -left-12 -top-12 w-48 h-48 rounded-full blur-3xl -z-10" />
+            <div className="absolute -left-12 -top-12 w-full h-16 rounded-full blur-3xl -z-10" />
             
             <motion.div
               variants={imageVariants}
               className="relative aspect-square rounded-2xl overflow-hidden shadow-xl"
             >
               <Image
-                src="/images/PROYECTOS/RENDERS/005.jpg"
+                src="/images/PROYECTOS/DECK/3.jpeg"
                 alt="Design team working"
                 fill
                 className="object-cover  transition-all duration-500"
@@ -75,7 +75,7 @@ const AboutSnapshot = () => {
               className="absolute -left-8 -bottom-8 w-2/3 aspect-video rounded-xl overflow-hidden shadow-xl border-2 border-white"
             >
               <Image
-                src="/images/PROYECTOS/RENDERS/003.jpg"
+                src="/images/PROYECTOS/LIVINGROOM/5.jpeg"
                 alt="Completed interior project"
                 fill
                 className="object-cover transition-all duration-500"

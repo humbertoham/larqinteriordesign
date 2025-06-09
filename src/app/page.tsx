@@ -1,5 +1,4 @@
 import AboutSnapshot from "@/components/aboutsnap";
-import BeforeAfter from "@/components/before";
 import CTA from "@/components/calltoaction";
 import Hero from "@/components/hero";
 import PortfolioTeaser from "@/components/portfoliot";

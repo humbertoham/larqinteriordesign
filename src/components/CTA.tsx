@@ -39,20 +39,20 @@ const CTA2 = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl rale lg:text-5xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl md:text-4xl mon lg:text-5xl font-bold text-white mb-6 leading-tight"
           >
-            Transform Your Space with<br /> Expert Design Solutions
+            Transform Your Space with<br /><span className='yel'> Expert Design</span> Solutions
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-white/90 lat mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-zinc-300 open font-medium mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Ready to elevate your interior to new heights of sophistication? Let's collaborate to create spaces that inspire and endure.
           </motion.p>
 
           <motion.div variants={itemVariants}>
-            <Link href='/contact' className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <Link href='/contactus' className="group relative inline-flex items-center justify-center px-8 py-4 bg-white mon text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               <span className="mr-4">Schedule Consultation</span>
               <FiArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
