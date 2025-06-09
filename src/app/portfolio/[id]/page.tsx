@@ -58,13 +58,12 @@ async function getPortfolioItem(id: string): Promise<PortfolioItem | null> {
   ];
   return items.find((item) => item.id === id) || null;
 }
-interface PageProps {
-  params: {
-    id: string;
-  };
+type Props = {
+  params: { id: string }
+  searchParams?: Record<string, string | string[] | undefined>
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params, searchParams }: Props) {
   const item = await getPortfolioItem(params.id);
 
   if (!item) {
