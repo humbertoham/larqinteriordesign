@@ -60,13 +60,15 @@ async function getPortfolioItem(id: string): Promise<PortfolioItem | null> {
   return items.find((item) => item.id === id) || null;
 }
 type Props = {
-  params: { id: string }
-  searchParams?: Record<string, string | string[] | undefined>
-}
+  params: { id: string };
+  searchParams?: Record<string, string | string[] | undefined>;
+};
 
-export default async function Page(
-  { params, searchParams }: Props
-): Promise<JSX.Element> {
+
+export default async function PortfolioPage({
+  params,
+  searchParams
+}: Props): Promise<JSX.Element> {
   const item = await getPortfolioItem(params.id);
 
   if (!item) {

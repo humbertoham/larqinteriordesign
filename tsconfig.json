@@ -12,10 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "types": [                  // ← make sure TS pulls in these type definitions
-     "node",
-     "react",
-    "react-dom"
+    "types": [ "next"                 // ← make sure TS pulls in these type definitio
    ],
     "incremental": true,
     "plugins": [
