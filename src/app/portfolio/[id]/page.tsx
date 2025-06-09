@@ -1,7 +1,8 @@
 import Nav from "@/components/nav";
 import PortfolioCarousel from "@/components/carousel"; // <- your new client carousel
 import ConButton from "@/components/contactbutton";
-import { JSX } from "react";
+import type { Metadata, ResolvingMetadata } from 'next'
+import { use } from 'react'
 
 interface PortfolioItem {
   id: string;
@@ -60,61 +61,77 @@ async function getPortfolioItem(id: string): Promise<PortfolioItem | null> {
   return items.find((item) => item.id === id) || null;
 }
 type Props = {
-  params: { id: string };
-  searchParams?: Record<string, string | string[] | undefined>;
-};
+  params: Promise<{ id: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
 
+// 1) generateMetadata with async params/searchParams
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { id } = await params
+  const item = await getPortfolioItem(id)
+  const previousImages = (await parent).openGraph?.images || []
 
-export default async function PortfolioPage({
-  params,
-  searchParams
-}: Props): Promise<JSX.Element> {
-  const item = await getPortfolioItem(params.id);
+  return {
+    title: item?.title ?? 'Portfolio Item',
+    openGraph: {
+      images: [...previousImages],
+    },
+  }
+}
+
+// 2) Server Component that unpacks the promises via `use()`
+export default function Page({ params }: Props) {
+  // unwrap the route params
+  const { id } = use(params)
+
+  // fetch your item
+  const item = use(getPortfolioItem(id))
 
   if (!item) {
     return (
-      <main>
+      <main className="container mx-auto px-4 py-8">
         <Nav />
         <p className="text-red-600">Portfolio item not found.</p>
       </main>
-    );
+    )
   }
 
   return (
     <>
       <Nav />
-      <main className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        {/* Left: Client‑only Carousel */}
+      <main className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left: client-only carousel */}
         <PortfolioCarousel imageUrls={item.imageUrls} title={item.title} />
 
-        {/* Right: still server‑rendered text */}
+        {/* Right: details */}
         <div className="flex flex-col justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold mon mb-4">
-            {item.title}
-          </h1>
-          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
-            {item.description}
-          </p>
-          <p className="text-xl mon font-semibold text-black leading-relaxed mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">{item.title}</h1>
+          <p className="text-base mb-6 text-zinc-600">{item.description}</p>
+
+          <p className="text-xl font-semibold text-black mb-4">
             Architectural Plans for Your Projects
           </p>
-          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
+          <p className="text-base mb-6 text-zinc-600">
             Clear, accurate plans are the foundation of any successful project.
             At LARQ Interior Design, we specialize in creating professional
             architectural drawings tailored to your needs—whether it’s a
             remodel, new construction, or custom interior design.
           </p>
-          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
+          <p className="text-base mb-6 text-zinc-600">
             Our detailed plans help you visualize your space, guide
             construction, and ensure every element aligns with your vision.
           </p>
-          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
+          <p className="text-base mb-6 text-zinc-600">
             Need expert plans for your project? Contact LARQ and let’s build it
             right from the start.
           </p>
+
           <ConButton />
         </div>
       </main>
     </>
-  );
+  )
 }
