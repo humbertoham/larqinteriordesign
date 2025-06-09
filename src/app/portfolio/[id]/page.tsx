@@ -1,6 +1,7 @@
 import Nav from "@/components/nav";
 import PortfolioCarousel from "@/components/carousel"; // <- your new client carousel
 import ConButton from "@/components/contactbutton";
+import { JSX } from "react";
 
 interface PortfolioItem {
   id: string;
@@ -63,7 +64,9 @@ type Props = {
   searchParams?: Record<string, string | string[] | undefined>
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page(
+  { params, searchParams }: Props
+): Promise<JSX.Element> {
   const item = await getPortfolioItem(params.id);
 
   if (!item) {
