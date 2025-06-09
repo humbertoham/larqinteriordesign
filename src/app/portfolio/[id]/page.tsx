@@ -58,14 +58,19 @@ async function getPortfolioItem(id: string): Promise<PortfolioItem | null> {
   ];
   return items.find((item) => item.id === id) || null;
 }
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: PageProps) {
   const item = await getPortfolioItem(params.id);
 
   if (!item) {
     return (
-      <main className="">
-        <Nav/>
+      <main>
+        <Nav />
         <p className="text-red-600">Portfolio item not found.</p>
       </main>
     );
@@ -87,18 +92,23 @@ export default async function Page({ params }: { params: { id: string } }) {
             {item.description}
           </p>
           <p className="text-xl mon font-semibold text-black leading-relaxed mb-6">
-           Architectural Plans for Your Projects
+            Architectural Plans for Your Projects
           </p>
-           <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
-            Clear, accurate plans are the foundation of any successful project. At LARQ Interior Design, we specialize in creating professional architectural drawings tailored to your needs—whether it’s a remodel, new construction, or custom interior design.
+          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
+            Clear, accurate plans are the foundation of any successful project.
+            At LARQ Interior Design, we specialize in creating professional
+            architectural drawings tailored to your needs—whether it’s a
+            remodel, new construction, or custom interior design.
           </p>
-           <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
-            Our detailed plans help you visualize your space, guide construction, and ensure every element aligns with your vision.
+          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
+            Our detailed plans help you visualize your space, guide
+            construction, and ensure every element aligns with your vision.
           </p>
-           <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
-            Need expert plans for your project? Contact LARQ and let’s build it right from the start.
+          <p className="text-base open font-medium text-zinc-600 leading-relaxed mb-6">
+            Need expert plans for your project? Contact LARQ and let’s build it
+            right from the start.
           </p>
-         <ConButton/>
+          <ConButton />
         </div>
       </main>
     </>
