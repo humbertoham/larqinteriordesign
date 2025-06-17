@@ -63,7 +63,7 @@ const AboutSnapshot = () => {
               className="relative aspect-square rounded-2xl overflow-hidden shadow-xl"
             >
               <Image
-                src="/images/PROYECTOS/DECK/3.jpeg"
+                src="/images/PROYECTOS/LIVINGROOM/2.jpeg"
                 alt="Design team working"
                 fill
                 className="object-cover  transition-all duration-500"
